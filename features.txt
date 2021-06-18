@@ -1,0 +1,8 @@
+Pause
+Play
+Mode (Auto, or Manual)
+Next
+Prev
+Minus 1 Minute
+Plus 1 Minute
+Programme start time (Auto)

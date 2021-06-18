@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="timer.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    </head>
+    <body>
+        <div id="settings" class="settings-container">
+            <label for="time">Set Program Start Time</label>
+            <input type="time" id="time"><br>
+            <p>Upload Program Details</p>
+            <input type="file" id="uploadfile" onchange="readFile(this)"><br>
+            <p>Or, add programs manually</p>
+            <button style="font-size:24px" class="fa" onclick="settingsClose()">Close</button>
+        </div>
+        <div id="details" class="program-details">
+            <p id="item">Item</p><br>
+            <p>by</p><br>
+            <p id="minister">Minister</p>
+        </div>
+        <div id="app"></div>
+    </body>
+    <script type="text/javascript" src="timer.js"></script>
+</html>

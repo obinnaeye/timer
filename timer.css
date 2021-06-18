@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .program-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .program-details > p {
+    font-size: 90px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .base-timer {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    bottom: 0px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 200px;
+  }
+
+  .settings-container {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    height: 80vh;
+    width: 300px;
+    background-color: chartreuse;
+    z-index: 10;
+    display: none;
+  }
+
+  .settings-button-container {
+    width: 100%;
+    display: grid;
+    align-self: flex-end;
+    margin-bottom: 0px;
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  .white {
+    color: white;
+  }
+
+  .flash {
+    color: red;
+  }
