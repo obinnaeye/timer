@@ -32,7 +32,7 @@ const schedule = [
 
 let current_index = 0;
 
-const COLOR_CODES = {
+let COLOR_CODES = {
   info: {
     color: "green"
   },
@@ -89,10 +89,11 @@ function startStop() {
 
 function reset() {
     const current_schedule = schedule[current_index];
-    console.log(current_schedule)
     document.getElementById("item").innerHTML = current_schedule.item;
     document.getElementById("minister").innerHTML = current_schedule.minister;
     TIME_LIMIT = current_schedule.time * 60;
+    COLOR_CODES.warning["threshold"] = current_schedule.time * 60 * 0.25;
+    COLOR_CODES.alert["threshold"] = current_schedule.time * 60 * 0.12;
     clearInterval(timerInterval);
     const elm = document.getElementById("base-timer-label");
     removeClass(elm, "white");
